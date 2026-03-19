@@ -14,7 +14,7 @@ class MainController extends AbstractController
     ) {
     }
 
-    #[Route('/')]
+    #[Route('/', name: 'app_homepage')]
     public function homepage(): Response
     {
         $ships = $this->starshipRepository->findAll();
